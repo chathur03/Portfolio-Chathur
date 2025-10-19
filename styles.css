@@ -1,0 +1,438 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: radial-gradient(circle at top, #061434 0%, #08022e 100%);
+  color: #e5e5e5;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/* ===== Header ===== */
+header {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.9em;
+  font-weight: 700;
+  color: #ffcc33;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: #eee;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ffcc33;
+}
+
+/* ===== Theme Toggle Button ===== */
+#theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: #ffcc33;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1em;
+}
+
+#theme-toggle:hover {
+  background: rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ===== Section ===== */
+.section {
+  max-width: 1150px;
+  margin: 50px auto;
+  padding: 50px 25px;
+  background: rgba(150, 91, 91, 0.04);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.05);
+}
+
+.section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  color: #ffcc33;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, #e6b800);
+  border-radius: 2px;
+}
+
+/* ===== Inline Logos ===== */
+.inline-logo {
+  height: 35px;
+  vertical-align: middle;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+/* ===== Skills Grid ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.skill-item {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.4);
+}
+
+.skill-item img {
+  height: 55px;
+  width: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.skill-item p {
+  font-size: 0.95em;
+  color: #ddd;
+}
+
+.skills-details {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.skills-details ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.skills-details li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Projects ===== */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  padding: 20px;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.project h3 {
+  color: #ffcc33;
+  margin-bottom: 10px;
+}
+
+/* ===== Links ===== */
+a {
+  color: #ffcc33;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 0.9em;
+  color: #aaa;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section {
+    padding: 35px 15px;
+    margin: 35px 10px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== GitHub Button ===== */
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 8px 15px;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 8px;
+  color: #ffcc33;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.github-btn img {
+  width: 22px;
+  height: 22px;
+  filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.github-btn:hover {
+  background: rgba(255, 215, 0, 0.1);
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.github-btn:hover img {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* ===== Education Section ===== */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.edu-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px 25px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.05);
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.edu-header h3 {
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: 600;
+}
+
+.edu-logo {
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
+  margin-left: 12px;
+}
+
+.edu-degree {
+  color: #ccc;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+}
+
+.edu-score {
+  color: #ffcc33;
+  font-weight: 500;
+}
+/* ===== Light Mode Styles — Elegant Cream & Glass Edition ===== */
+body.light-mode {
+  background: linear-gradient(180deg, #f8f5ee 0%, #f2ebdf 100%);
+  color: #2b2b2b;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+/* ===== Header ===== */
+body.light-mode header {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.08);
+}
+
+body.light-mode header h1 {
+  color: #b8860b;
+  text-shadow: 0 1px 2px rgba(255, 215, 0, 0.3);
+}
+
+body.light-mode a {
+  color: #b8860b;
+  transition: color 0.3s ease;
+}
+
+body.light-mode a:hover {
+  color: #000;
+}
+
+/* ===== Sections ===== */
+body.light-mode .section {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(18px) saturate(170%);
+  -webkit-backdrop-filter: blur(18px) saturate(170%);
+  border: 1px solid rgba(218, 165, 32, 0.25);
+  color: #2b2b2b;
+  box-shadow: 0 6px 20px rgba(218, 165, 32, 0.12);
+  transition: all 0.4s ease;
+}
+
+body.light-mode .section:hover {
+  box-shadow: 0 10px 25px rgba(218, 165, 32, 0.18);
+}
+
+body.light-mode .section h2 {
+  color: #b8860b;
+  text-shadow: 0 1px 2px rgba(218, 165, 32, 0.3);
+}
+
+body.light-mode .section h2::after {
+  background: linear-gradient(90deg, #ffcc33, #d4af37);
+}
+
+/* ===== Skill Items / Projects / Education Cards ===== */
+body.light-mode .skill-item,
+body.light-mode .project,
+body.light-mode .edu-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(218, 165, 32, 0.25);
+  color: #222;
+  box-shadow: 0 4px 15px rgba(218, 165, 32, 0.1);
+  transition: all 0.35s ease;
+}
+
+body.light-mode .skill-item:hover,
+body.light-mode .project:hover,
+body.light-mode .edu-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(218, 165, 32, 0.5);
+  box-shadow: 0 0 25px rgba(218, 165, 32, 0.25);
+}
+
+/* ===== Education Section Readability ===== */
+body.light-mode .edu-header h3 {
+  color: #1f1f1f;
+}
+
+body.light-mode .edu-degree {
+  color: #444;
+}
+
+body.light-mode .edu-score {
+  color: #b8860b;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(255, 215, 0, 0.25);
+}
+
+/* ===== Footer ===== */
+body.light-mode footer {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #555;
+  border-top: 1px solid rgba(218, 165, 32, 0.2);
+  box-shadow: 0 -2px 10px rgba(218, 165, 32, 0.05);
+}
+
+/* ===== Theme Toggle Button ===== */
+body.light-mode #theme-toggle {
+  color: #b8860b;
+  border: 1px solid rgba(218, 165, 32, 0.35);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(218, 165, 32, 0.1);
+}
+
+body.light-mode #theme-toggle:hover {
+  background: rgba(255, 248, 220, 0.7);
+  box-shadow: 0 0 12px rgba(218, 165, 32, 0.25);
+}
+
+/* ===== Smooth Transition for Theme Change ===== */
+body, header, .section, .skill-item, .project, .edu-card, footer, #theme-toggle {
+  transition: background 0.6s ease, color 0.6s ease, box-shadow 0.6s ease, border 0.6s ease;
+}
